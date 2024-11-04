@@ -5,29 +5,19 @@ const BalancePage = () => {
   return (
     <MainLayout type="balance">
       {/* top content start*/}
-      <div className="mb-8 sm:flex sm:gap-6">
-        <div className="sm:w-1/3">
-          <Card />
-        </div>
-        <div className="sm:w-1/3">
-          <Card />
-        </div>
-        <div className="sm:w-1/3">
-          <Card />
-        </div>
+      <div className="md:grid md:grid-cols-3 md:gap-6">
+        <Card title="Balance" />
+        <Card title="Energy" />
+        <Card title="&nbsp;"
+          desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam..."
+       />
       </div>
       {/* top content end*/}
-      {/* bottom content start*/}
-      <div className="mb-8 sm:flex sm:gap-6">
-        <div className="sm:w-1/3">
-          <Card />
-        </div>
-        <div className="sm:w-1/3">
-          <Card />
-        </div>
-        <div className="sm:w-1/3">
-          <Card />
-        </div>
+      {/* bottom content start*/} 
+      <div className="md:grid md:grid-cols-3 md:gap-6">
+        <Card desc="Lorem ipsum dolor sit amet consectetur adipisicing elit..." />
+        <Card />
+        <Card />
       </div>
       {/* bottom content end*/}
     </MainLayout>

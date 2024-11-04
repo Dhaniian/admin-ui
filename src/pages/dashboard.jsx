@@ -4,32 +4,30 @@ import MainLayout from "../components/Layouts/MainLayout";
 const DashboardPage = () => {
   return (
     <MainLayout type="dashboard">
-        {/* top content start*/}
-        <div className="mb-4 sm:flex sm:gap-6">
-            <div className="mb-4 sm:w-1/3">
-            <Card/>
-            </div>
-            <div className="mb-4 sm:w-1/3">
-            <Card/>
-            </div>
-            <div className="mb-4 sm:w-1/3">
-            <Card/>
-            </div>
+      {/* top content start*/}
+      <div className="md:grid md:grid-cols-3 md:gap-6">
+        <Card title="Total Balance" />
+        <Card 
+          title="Goals"
+          desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam dolore sapiente susce..."
+        />
+        <Card title="Upcoming Bill" />
+      </div>
+      {/* top content end*/}
+      {/* bottom content start*/}
+      <div className="md:grid md:grid-cols-3 md:gap-6">
+        <div className="md:col-span-1">
+          <Card 
+            title="Recent Transaction"
+            desc="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic at ab, voluptates dolo..."
+          />
         </div>
-        {/* top content end*/}
-        {/* bottom content start*/}
-        <div className="sm:flex sm:gap-6 ">
-            <div className="mb-4 sm:w-1/3">
-            <Card/>
-            </div>
-            <div className="mb-4 sm:w-1/3">
-            <Card/>
-            </div>
-            <div className="mb-4 sm:w-1/3">
-            <Card/>
-            </div>
+        <div className="md:col-span-2 flex flex-col flex-1">
+          <Card title="Statistics" />
+          <Card title="Expenses Breakdown" />
         </div>
-        {/* bottom content end*/}
+      </div>
+      {/* bottom content end*/}
     </MainLayout>
   );
 };
