@@ -1,4 +1,8 @@
-import { createBrowserRouter, Navigate, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  Navigate,
+  RouterProvider,
+} from "react-router-dom";
 import SignInPage from "./pages/signIn";
 import SignUpPage from "./pages/signUp";
 import ErrorRoute from "./pages/errorRoute";
@@ -20,38 +24,53 @@ const App = () => {
   const myRouter = createBrowserRouter([
     {
       path: "/",
-      element: <RequireAuth><DashboardPage/></RequireAuth>,
-      errorElement: <ErrorRoute/>,
+      element: (
+        <RequireAuth>
+          <DashboardPage />
+        </RequireAuth>
+      ),
+      errorElement: <ErrorRoute />,
     },
     {
       path: "/error",
-      element: <ErrorRoute/>,
+      element: <ErrorRoute />,
     },
     {
       path: "/login",
-      element: <SignInPage/>,
+      element: <SignInPage />,
     },
     {
       path: "/register",
-      element: <SignUpPage/>,
+      element: <SignUpPage />,
     },
     {
       path: "/forgot-password",
-      element: <ForgotPassword/>,
+      element: <ForgotPassword />,
     },
     {
       path: "/balance",
-      element: <RequireAuth><BalancePage/></RequireAuth>,
+      element: (
+        <RequireAuth>
+          <BalancePage />
+        </RequireAuth>
+      ),
     },
     {
       path: "/expense",
-      element: <RequireAuth><ExpensePage/></RequireAuth>,
+      element: (
+        <RequireAuth>
+          <ExpensePage />
+        </RequireAuth>
+      ),
     },
     {
       path: "/goal",
-      element: <RequireAuth><GoalPage/></RequireAuth>,
-    }
-
+      element: (
+        <RequireAuth>
+          <GoalPage />
+        </RequireAuth>
+      ),
+    },
   ]);
 
   return (
